@@ -1,0 +1,11 @@
+/* .social-icon:hover img {
+  filter: invert(32%) sepia(98%) saturate(358%) hue-rotate(304deg) brightness(93%) contrast(92%);
+} */
+
+.social-icon:hover path {
+  fill: red;
+}
+
+.bg {
+  background: linear-gradient(to bottom, #6f6071, #010402);
+}

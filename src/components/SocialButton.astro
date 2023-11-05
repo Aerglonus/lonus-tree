@@ -1,18 +1,28 @@
 ---
+import "../styles/utils.css";
 interface Props {
 	socialName: string;
 	socialURL: string;
 	socialIcon: string;
+	socialColor: string;
 }
-const { socialName, socialURL, socialIcon } = Astro.props;
+const { socialURL, socialIcon, socialColor } = Astro.props;
 ---
 
 <a
-	class="h-11 pl-[19px] pr-[19px] py-2.5 bg-[#4D465D] rounded-md justify-center items-center gap-[8px] inline-flex transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-200"
+	class="rounded-md justify-center items-center gap-[8px] inline-flex transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-50"
 	href={socialURL}
 >
-	<img class="w-[23px] h-[18px]" src={socialIcon} alt="" />
-	<div class="text-[#E4DCF4] text-base font-semibold font-['Poppins']"
-		>{socialName}</div
-	>
+	<div class="group">
+		<svg
+			class={`fill-current ${socialColor} transition-all duration-50 ease-in-out`}
+			width="22"
+			height="22"
+			viewBox="0 0 22 22"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<path d={socialIcon}></path>
+		</svg>
+		<!-- <img class="w-[23px] h-[23px]" src={socialIcon} alt="" /> -->
+	</div>
 </a>
