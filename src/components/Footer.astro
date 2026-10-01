@@ -1,0 +1,27 @@
+---
+import { Image } from 'astro:assets';
+import logoImage from '../assets/hatsalsalogo.png';
+---
+
+<footer class="w-full flex flex-col items-center justify-center gap-3 pt-6 pb-1 px-4 text-center">
+	<!-- Compliance Legal Links -->
+	<nav class="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs text-[#E4DCF4]/60 font-['Poppins']">
+		<a href="/terms" class="hover:text-green-400 transition-colors">Terms of Service</a>
+		<span class="text-[#4D465D]">&bull;</span>
+		<a href="/privacy" class="hover:text-green-400 transition-colors">Privacy Policy</a>
+		<span class="text-[#4D465D]">&bull;</span>
+		<a href="/refund" class="hover:text-green-400 transition-colors">Refund & Cancellation</a>
+		<span class="text-[#4D465D]">&bull;</span>
+		<a href="mailto:support@hatsalsa.com" class="hover:text-green-400 transition-colors"
+			>Contact: support@hatsalsa.com</a
+		>
+	</nav>
+
+	<!-- Branding & Company Info -->
+	<div class="flex items-center justify-center gap-2 pt-1">
+		<Image class="w-4 h-4 opacity-80" src={logoImage} alt="Hatsalsa Logo" loading="eager" />
+		<span class="text-[#E4DCF4]/40 text-xs font-medium font-['Poppins']">
+			&copy; {new Date().getFullYear()} Hatsalsa, Inc. All rights reserved.
+		</span>
+	</div>
+</footer>
