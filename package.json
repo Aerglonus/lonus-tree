@@ -8,7 +8,7 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "prepare": "husky install || true",
+    "prepare": "husky || true",
     "format": "prettier --write .",
     "lint": "eslint 'src/**/*.{ts,js}' --max-warnings=0",
     "lint:fix": "eslint 'src/**/*.{ts,js}' --fix",
